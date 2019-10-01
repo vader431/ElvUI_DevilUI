@@ -1,0 +1,11 @@
+## Interface: 70300
+## Author: Devil
+## Version: 1.00
+## Title: |cff1784d1ElvUI|r |cffff69b4DevilUI|r
+## Notes: Contains layouts from SomePerson
+## RequiredDeps: ElvUI, ElvUI_Enhanced, AddOnSkins
+## DefaultState: disabled
+
+Code.lua
+Balance_Druid_WA.lua
+SharedMedia.lua
