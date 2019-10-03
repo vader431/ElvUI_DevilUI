@@ -383,10 +383,6 @@ local InstallerData = {
 	--["tutorialImageSize"] = {384, 192},
 	["Pages"] = {
 		[1] = function()
-			--PluginInstallFrame:Size(660, 480)
-			--PluginInstallFrame.Status:SetStatusBarColor(77/255, 179/255, 255/255)
-			--PluginInstallFrame.Desc1:Point('TOPLEFT', 50, -75)
-			PluginInstallFrame.Title:SetFont("Interface\\AddOns\\ElvUI_DevilUI\\media\\Fonts\\Neuropol\\Neuropol.ttf", 16, "OUTLINE")
 			PluginInstallTutorialImage:SetTexture("Interface\\AddOns\\ElvUI_DevilUI\\media\\screenshot_122.tga")
 			PluginInstallFrame.SubTitle:SetFormattedText("Welcome to the installation for %s.", MyPluginName)
 			PluginInstallFrame.Desc1:SetText("This installation process will guide you through a few steps and apply settings to your current ElvUI profile. If you want to be able to go back to your original settings then create a new profile before going through this installation process.")
@@ -396,7 +392,6 @@ local InstallerData = {
 			PluginInstallFrame.Option1:SetText("Skip Process")
 		end,
 		[2] = function()
-			--PluginInstallFrame:Size(660, 480)
 			PluginInstallTutorialImage:SetTexture("Interface\\AddOns\\ElvUI_DevilUI\\media\\screenshot_123.tga")
 			PluginInstallFrame.SubTitle:SetText("Layouts")
 			PluginInstallFrame.Desc1:SetText("These are the layouts that are available. Please click a button below to apply the layout of your choosing.")
@@ -412,9 +407,8 @@ local InstallerData = {
 			PluginInstallFrame.Option3:SetText("DPS")
 		end,
 		[3] = function()
-			--PluginInstallFrame:Size(660, 480)
 			PluginInstallTutorialImage:SetTexture("Interface\\AddOns\\ElvUI_DevilUI\\media\\screenshot_124.tga")
-			PluginInstallFrame.SubTitle:SetText("StatusBar Texture")
+			PluginInstallFrame.SubTitle:SetText("StatusBar & Nameplates Texture")
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() StatusBar("ElvUI Norm") end)
 			PluginInstallFrame.Option1:SetText("ElvUI Norm")
@@ -432,12 +426,11 @@ local InstallerData = {
 			PluginInstallFrame.Option1:SetText("Balance Druid")
 		end, --]]
 		[4] = function()
-			--PluginInstallFrame:Size(660, 480)
-			PluginInstallFrame.Desc3:SetTextColor(255 , 0 , 0)
 			PluginInstallFrame.SubTitle:SetText("Installation Complete")
 			PluginInstallFrame.Desc1:SetText("You have completed the installation process.")
 			PluginInstallFrame.Desc2:SetText("Please click the button below in order to finalize the process and automatically reload your UI.")
 			PluginInstallFrame.Desc3:SetText(L["Some of the settings might require a game restart to be applied."])
+			PluginInstallFrame.Desc3:SetTextColor(255 , 0 , 0)
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", InstallComplete)
 			PluginInstallFrame.Option1:SetText("Finished")
@@ -447,7 +440,7 @@ local InstallerData = {
 	StepTitles = {
 		[1] = "Welcome",
 		[2] = "Layouts",
-		[3] = "Weak Auras",
+		[3] = "StatusBar & Nameplates Texture",
 		[4] = "Installation Complete",
 	},
 	StepTitlesColor = {1, 1, 1},
