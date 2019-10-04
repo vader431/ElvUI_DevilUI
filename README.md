@@ -1,4 +1,4 @@
 # ElvUI_DevilUI
 <p align="center">
-    <img width="640" height="360" src="preview.jpg">
+    <img width="800" height="450" src="preview.jpg">
 </p>
