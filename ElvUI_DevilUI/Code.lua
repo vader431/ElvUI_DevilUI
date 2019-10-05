@@ -292,7 +292,6 @@ E.db["actionbar"]["bar5"]["enabled"] = false
 E.db["actionbar"]["fontOutline"] = "OUTLINE"
 E.db["actionbar"]["font"] = "Expressway"
 E.db["actionbar"]["stanceBar"]["enabled"] = false
---E.db["actionbar"]["barPet"]["enabled"] = false
 E.db["actionbar"]["barPet"]["buttonsPerRow"] = 10
 E.db["actionbar"]["barPet"]["point"] = "BOTTOMLEFT"
 E.db["actionbar"]["bar4"]["point"] = "BOTTOMLEFT"
@@ -351,15 +350,6 @@ local function StatusBar(texture)
 		E:UpdateAll(true)
 end
 
---[[WeakAuras Setup
-local function WeakAuras(class)
-	if class == "Balance Druid" then
-		Balance_Druid_WA()
-		--E:Print(L["WeakAuras profile has been loaded."])
-		PluginInstallStepComplete.message = L["WeakAuras profile installed"]
-		PluginInstallStepComplete:Show()
-	end
-end--]]
 
 --This function is executed when you press "Skip Process" or "Finished" in the installer.
 local function InstallComplete()
@@ -416,15 +406,7 @@ local InstallerData = {
 			PluginInstallFrame.Option2:SetScript("OnClick", function() StatusBar("Melli Dark") end)
 			PluginInstallFrame.Option2:SetText("Melli Dark")
 
-		end,	
-		--[[[3] = function()
-			PluginInstallTutorialImage:SetTexture("Interface\\AddOns\\ElvUI_DevilUI\\media\\screenshot_124.tga")
-			PluginInstallFrame.SubTitle:SetText("Weak Auras")
-			PluginInstallFrame.Desc2:SetText(L["Importance: |cffFF0000Low|r"])
-			PluginInstallFrame.Option1:Show()
-			PluginInstallFrame.Option1:SetScript("OnClick", function() WeakAuras("Balance Druid") end)
-			PluginInstallFrame.Option1:SetText("Balance Druid")
-		end, --]]
+		end,
 		[4] = function()
 			PluginInstallFrame.SubTitle:SetText("Installation Complete")
 			PluginInstallFrame.Desc1:SetText("You have completed the installation process.")
